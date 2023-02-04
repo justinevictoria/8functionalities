@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JS Functionalities</title>
+</head>
+
+<body>
+    <div class="button1">
+        Good morning
+        <button class="white" onclick="changeColor('white')">White</button>
+    </div><br>
+    <div class="button2">
+        <button class="click" onClick="alert('Have a good day!')">Click me!</button>
+    </div>
+    <div class="button3">
+        <p id="phrase">Take Care</p>
+        <button type="button" onclick="myFunction()">Change font size</button>
+    </div><br>
+    <div class="youtube">
+        <button onClick="window.location = 'http://www.Youtube.com'">Go to Youtube</button>
+    </div>
+    <div class="bg">
+        <button class="gray" onclick="changeColor('gray')">Change Background Color</button>
+    </div>
+    <div class="time">
+        <button class="clock" onclick="getElementById('time').innerHTML=Date()">Show Time & Date</button>
+        <p id="time"></p>
+    </div>
+    <div class="currency-converter">
+        <a href="currency.html">Currency Converter</a>
+    </div>
+    <div class="cart">
+        <a href="index-cart.html">Add to Cart</a>
+    </div>
+
+
+    <script>
+        function changeColor(color) {
+            document.querySelector('.button1').style.color = color;
+        }
+        function myFunction() {
+            document.getElementById("phrase").style.fontSize = "x-large";
+        }
+
+        function changeColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function convert() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result = document.getElementById("result");
+
+            let exchangeRates = {
+                PHP: {
+                    USD: 0.018,
+                    EUR: 0.017,
+                    GBP: 0.015
+                },
+                USD: {
+                    PHP: 54.97,
+                    EUR: 0.92,
+                    GBP: 0.82
+                },
+                EUR: {
+                    PHP: 59.44,
+                    USD: 1.08,
+                    GBP: 0.89
+                },
+                GBP: {
+                    PHP: 66.94,
+                    USD: 1.22,
+                    EUR: 1.13
+                }
+            };
+
+            result.innerHTML = (amount * exchangeRates[from][to]).toFixed(2);
+        }
+
+        $('.btn-click').click(function () {
+            $("body").css("font-size", "50px");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

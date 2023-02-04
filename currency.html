@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="converter">
+
+
+            <h1 class="tool">Currency Converter</h1>
+            <form>
+                <label for="amount">Enter amount:</label>
+                <input type="text" id="amount" name="amount">
+                <br>
+                <label for="from">From:</label>
+                <select id="from" name="from">
+                    <option value="PHP">PHP</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+
+                <label for="to">To:</label>
+                <select id="to" name="to">
+                    <option value="PHP">PHP</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <br>
+                <button type="button" class="btn" onclick="convert()">Convert</button>
+            </form>
+            <div class="output">
+                <p>Result: <span id="result"></span></p>
+            </div>
+            <script>
+                function convert() {
+                    let amount = document.getElementById("amount").value;
+                    let from = document.getElementById("from").value;
+                    let to = document.getElementById("to").value;
+                    let result = document.getElementById("result");
+
+                    let exchangeRates = {
+                        PHP: {
+                            USD: 0.018,
+                            EUR: 0.017,
+                            GBP: 0.015
+                        },
+                        USD: {
+                            PHP: 54.97,
+                            EUR: 0.92,
+                            GBP: 0.82
+                        },
+                        EUR: {
+                            PHP: 59.44,
+                            USD: 1.08,
+                            GBP: 0.89
+                        },
+                        GBP: {
+                            PHP: 66.94,
+                            USD: 1.22,
+                            EUR: 1.13
+                        }
+                    };
+
+                    result.innerHTML = (amount * exchangeRates[from][to]).toFixed(2);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

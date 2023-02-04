@@ -1,0 +1,166 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    justify-content: center;
+    background-color: lightskyblue;
+}
+
+.button1 {
+
+    color: black;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#phrase {
+    margin-top: 10px;
+}
+
+.button3 {
+    color: black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    margin-bottom: 0;
+}
+
+.white {
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+
+}
+
+.click {
+
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+.youtube {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+.bg {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+.time {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+
+body {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.tool {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+
+#amount,
+#from,
+#to {
+    margin: 1rem;
+    background: white;
+
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.converter {
+    background: transparent;
+    text-align: center;
+    margin: auto 0;
+    padding: 5rem;
+    border: 1px solid white;
+
+
+}
+
+#result {
+    background: transparent;
+
+
+    padding: 0.5rem 1rem;
+    color: white;
+    margin: 1rem;
+}
+
+
+.btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    margin: 2px 0;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: rgb(240, 239, 239);
+    color: black;
+}
+
+.output {
+    padding: 1rem;
+}
+
+.currency-converter {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+.cart {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+}
